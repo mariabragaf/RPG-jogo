@@ -39,6 +39,8 @@ console.log(`Restaurada com o poder de seu mestre superior, adquiriu ${vida} pon
 console.log(`Vida Suficiente? ${vidaSuficiente}, Ataque Forte? ${ataqueForte}, Nível Avançado? ${nivelAvancado}.`);
 console.log(`Pode Enfrentar o Guardião? ${podeEnfrentarGuardiao} - a última guerra está à vista, e o destino se escreve nas estrelas! 🦸🏻‍♀️🩷✨`);
 
+console.log("");
+
 //Nível - 2
 let nomePersonagem = "Estelar"; 
 let CLASSE = "Heroína Cósmica"; 
@@ -65,8 +67,85 @@ console.log(`Antes de mais nada, ${nome} usou a sua super Lâmina de Solarium, e
 console.log("A espada acertou de forma certeira todos os Vermes que a cercaram, transfromando-os em faíscas luminosas.");
 console.log("Assim, a corajosa Estrela Rosa seguiu seu caminho com a missão de derrotar Aetherion, o Guardião dos Portais Celestes.");
 
+console.log("");
+
 console.log("🔮⚠️CAPÍTULO 1: Avisos Mágicos");
+console.log("");
+
+console.log(`No meio do caminho ${nome} acaba pousando no planeta Helion Prime, onde havia alguns Mestres Solariuns que a passaram alguns avisos importântes para a sua jornada!!!`);
+console.log("");
 
 if (nivel < 20) {
-    console.log("📍")
+    console.log(`🧙‍♂️ Mestre Solarius a adverte: ${nome}, ainda não dominaste a luz para esta missão.`);
+    console.log(`⚠️ Mas ${nome} sente que o destino não pode esperar...`);
 }
+
+if (ouro >= 270) {
+    console.log(`💰 Suas moedas cósmicas brilham intensamente - mercadores das Rochas Rosas a aguardam anciosamente...`);
+
+}
+
+if (classe === `${classe}`) {
+    console.log(`✨ A luz estelar corre em suas veias. Estelar está pronta para brilhar!`);
+}
+
+console.log("");
+
+console.log("🌌CAPÍTULO 2: Convergência dos Astros");
+console.log("");
+
+console.log(`Após sair do planeta destinto, ${nome} seguiu o seu caminho até as Rochas Rosas, para que assim, fizesse algumas negociações! 🪨💗`);
+console.log("");
+
+if (ouro >= 270) {
+    console.log(`💎 Com suas moedas estelares, ${nome} adquire novos aprimoramentos nas Rochas Rosas!`);
+    forca += 150;
+    defesa += 50;
+    ouro -= 270;
+    console.log(`🥊Força e defesa aumentaram! Ouro restante ${ouro}`);
+} else {
+    console.log(`💔 Sem recursos cósmicos suficientes, ${Estelar} confia em sua conexão com a luz para seguir adiante.`);
+    console.log(`🌠 A adve4rsidade afia seus sentidos` - agilidade + 2);
+    agilidade += 2;
+}
+if (experiencia >= 100) {
+    console.log(`🌟 Um fluxo de sabedoria cósmica envolve ${nome}! Ela transcende para um novo nível de poder!`);
+    nivel++;
+    experiencia = 200;
+    vidaAtual = vidaMaxima;
+    console.log(`🧬 ${nome} alcançou o nível ${nivel} e sua energia vital foi restaurada!`); 
+} else {
+    console.log(`📚 ${nome} ainda absorve fragmentos de conhecimento das estrelas...`);
+    console.log(`🔭 Sabedoria cósmica atual:`- experiencia / 100);
+}
+
+console.log("⚔️☄️Capítulo 3: O confronto Estelar");
+console.log("");
+
+console.log(`Assim que ${nome} saiu das Rochas Rosas, sobrevoou mais um pouco até chegar enfim na base do guardião dos portais celestes, o mais temido das galáxias!`);
+console.log(`Antes que pudesse entrar na base, ${nome} se deparou com os guardas do caos!`);
+console.log(`E então...usou da sua visão laser verde para derrotar cada um deles.`);
+console.log(`Com todos os guardas mortos, ${nome} seguiu seu caminho entrando nas profundidades da base...`);
+console.log(`Quando ${nome} finalmente chega no templo do guardião, ela o avista, e então..começa uma GRANDE batalha super estrelante entre eles!⚔️☄️🔥⚡!!!!!`);
+console.log("");
+
+let poderInimigo = 100;
+
+if (vidaAtual <= 140) {
+    console.log(`🔋 Com pouca energia vital, ${nome} ativa o núcleo estelar de emergência!`);
+    console.log(`🔥 Um ataque de luz concentrada explode a partir de sua Pulseira Solar! `);
+    poderInimigo -= (forca * 2);
+} else if (manaAtual >= 80 && classe === "Heroí´na Cósmica") {
+    console.log(`⚡ ${nome} canaliza energia solar pura em sua Lâmina de Solarium!`);
+    console.log(`🌞 Uma rajada de plasma corta o inimigo com fúria estelar!`);
+    poderInimigo -= (forca + 20);
+    manaAtual -= 80;
+} else if (agilidade >= 150) {
+    console.log(`🌪️ Utilizando sua velocidade luminosa, ${nome} defere um ataque rápido e preciso!`);
+   poderInimigo -= forca; 
+} else {
+    console.log(`🛡️ ${nome} assume uma postura defensiva, absorvendo a energia fdo ambiente...`);
+    poderInimigo -= (forca / 2);
+    vidaAtual += 10;
+}
+console.log(`🐉 Poder restante do inimigo:` + poderInimigo);
