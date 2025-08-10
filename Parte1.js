@@ -25,7 +25,7 @@ ataqueForte = ataqueTotal > 60;
 nivelAvancado = nivel >= 10;
 podeEnfrentarGuardiao = vidaSuficiente && (ataqueForte || nivelAvancado);
 
-console.log(" 💫 O Manto da Estrela ");
+console.log("💫 O Manto da Estrela ");
 console.log("");
 console.log(`No Limiar o Cosmo antigo, onde estrelas morrem e renascem, nasceu uma lenda.`);
 console.log(`Das cinzas de uma era esquecida, forjou-se uma guerreira destinada a mudar o curso das contelações.`);
@@ -42,110 +42,123 @@ console.log(`Pode Enfrentar o Guardião? ${podeEnfrentarGuardiao} - a última gu
 console.log("");
 
 //Nível - 2
-let nomePersonagem = "Estelar"; 
-let CLASSE = "Heroína Cósmica"; 
-let vidaAtual = 140; 
-let vidaMaxima = 300;
-let manaAtual = 80;
-let manaMaxima = 80;
-let NIVEL = 20;
-let experiencia = 65;
-let OURO = 270;
+let nomePersonagem = "Estelar";
+let classePersonagem = "Heroína Cósmica";
+let vidaAtual = 100;
+let vidaMaxima = 100;
+let manaAtual = 50;
+let manaMaxima = 50;
+let nivelPersonagem = 20;
+let experiencia = 15;
+let moedasCosmicas = 270; //tinha 300, gastou no nível anterior
 
-let forca = 100;
-let defesa = 40;
-let agilidade = 200;
-let combatesVencidos = 1;
+// Novos atributos
+let forca = 30;
+let defesa = 18;
+let agilidade = 20;
+let combatesVencidos = 0;
 
-let localAtual = "Galáxias Sombrias do Reino de Tamaran";
-let missaoAtual = "Investigar os Sinais Cósmicos e Derrotar o Guardião";
+let localAtual = "Reino de Tamaran";
+let missaoAtual = "Enfrentar o Guardião Artemin, dos portais celestes";
 
-console.log("🎇A Jornada Ultra Estrelar");
-console.log("");
-console.log(`Após ${nome} receber sinais Cósmicos em torno da galáxia, ela percebeu a presença de Vermes Eternos ao redor.`)
-console.log(`Antes de mais nada, ${nome} usou a sua super Lâmina de Solarium, espada de alta tecnologia, capaz de concentrar a luz das estrelas e liberar poderosas lâminas de plasma.`);
-console.log("A espada acertou de forma certeira todos os Vermes que a cercaram, transfromando-os em faíscas luminosas.");
-console.log("Assim, a corajosa Estrela Rosa seguiu seu caminho com a missão de derrotar Aetherion, o Guardião dos Portais Celestes.");
-
+// Prólogo
+console.log("📜 PRÓLOGO: Um brilho no horizonte");
 console.log("");
 
-console.log("🔮⚠️CAPÍTULO 1: Avisos Mágicos");
-console.log("");
+console.log(`Após atravessar os portais estelares do Reino de Tamaran, Estelar sente seu destino se estreitar.`);
+console.log(`Sua missão é clara: derrotar o temido Guardião Artemin, defensor dos Portais Celestiais, e restaurar a energia do Núcleo Cósmico.`);
 
-console.log(`No meio do caminho ${nome} acaba pousando no planeta Helion Prime, onde havia alguns Mestres Solariuns que a passaram alguns avisos importântes para a sua jornada!!!`);
-console.log("");
-
-if (nivel < 20) {
-    console.log(`🧙‍♂️ Mestre Solarius a adverte: ${nome}, ainda não dominaste a luz para esta missão.`);
-    console.log(`⚠️ Mas ${nome} sente que o destino não pode esperar...`);
+if (classePersonagem === "Heroína Cósmica") {
+    console.log("🔅 Seu corpo emite partículas solares enquanto o cosmo responde ao seu chamado.");
 }
 
-if (ouro >= 270) {
-    console.log(`💰 Suas moedas cósmicas brilham intensamente - mercadores das Rochas Rosas a aguardam anciosamente...`);
-
-}
-
-if (classe === `${classe}`) {
-    console.log(`✨ A luz estelar corre em suas veias. Estelar está pronta para brilhar!`);
+if (nivelPersonagem < 25) {
+    console.log("⚠️ um espírito ancestral surge e sussurra: 'Estelar...ainda não és completa para o desafio final.'");
+    console.log("Mas a coragem dela pulsa mais alto que qualquer aviso.");
 }
 
 console.log("");
 
-console.log("🌌CAPÍTULO 2: Convergência dos Astros");
+// ATO I - O Despertar nas Rochas Rosas
+console.log("ATO I: 🪨💗 O Despertar nas Rochas Rosas");
+console.log("");
+console.log("Nas Rochas Rosas, ponto de negociações e refúgio de viajantes, Estelar encontra um artefato flutuando diante dela.");
+console.log("Um dispositivo antigo... mas funcional.");
+
+if (moedasCosmicas >= 200) {
+   console.log("🪙 Usando suas moedas cósmicas, Estelar ativa o artefato e desbloqueia a Armadura Solar!");
+   defesa += 5;
+   forca += 3;
+   moedasCosmicas -= 80;
+   console.log("🛡️ Defesa " + defesa + " | Força: " + forca + " | Moedas restantes: " + moedasCosmicas);
+}
+
+console.log("Ao longe, um mercador intergaláctico surge oferecendo upgrades raros...");
 console.log("");
 
-console.log(`Após sair do planeta destinto, ${nome} seguiu o seu caminho até as Rochas Rosas, para que assim, fizesse algumas negociações! 🪨💗`);
+// ATO II - Escolha de Rota
+console.log("🧭 ATO II: Itercâmbio Intergaláctico");
 console.log("");
 
-if (ouro >= 270) {
-    console.log(`💎 Com suas moedas estelares, ${nome} adquire novos aprimoramentos nas Rochas Rosas!`);
-    forca += 150;
-    defesa += 50;
-    ouro -= 270;
-    console.log(`🥊Força e defesa aumentaram! Ouro restante ${ouro}`);
+console.log("Você pode comprar um Chip de Energia Solar por 100 moedas... mas o tempo está se esgotando.");
+
+if (moedasCosmicas >= 100) {
+    console.log("🧠 Estelar negocia com precisão e adquire o Chip Solar, ampliando seus poderes.");
+    forca += 10;
+    manaAtual += 10;
+    moedasCosmicas -= 100;
+    console.log("🔥 Força agora:" + forca + " | Mana:" + manaAtual + " | Moedas:" + moedasCosmicas);
 } else {
-    console.log(`💔 Sem recursos cósmicos suficientes, ${Estelar} confia em sua conexão com a luz para seguir adiante.`);
-    console.log(`🌠 A adve4rsidade afia seus sentidos` - agilidade + 2);
-    agilidade += 2;
-}
-if (experiencia >= 100) {
-    console.log(`🌟 Um fluxo de sabedoria cósmica envolve ${nome}! Ela transcende para um novo nível de poder!`);
-    nivel++;
-    experiencia = 200;
-    vidaAtual = vidaMaxima;
-    console.log(`🧬 ${nome} alcançou o nível ${nivel} e sua energia vital foi restaurada!`); 
-} else {
-    console.log(`📚 ${nome} ainda absorve fragmentos de conhecimento das estrelas...`);
-    console.log(`🔭 Sabedoria cósmica atual:`- experiencia / 100);
+    console.log("💔 Sem recursos suficientes, Estelar se afasta e reflete sua jornada.");
+    agilidade += 5;
+    console.log("💨 Agilidade aumentada para:" + agilidade);
 }
 
-console.log("⚔️☄️Capítulo 3: O confronto Estelar");
 console.log("");
 
-console.log(`Assim que ${nome} saiu das Rochas Rosas, sobrevoou mais um pouco até chegar enfim na base do guardião dos portais celestes, o mais temido das galáxias!`);
-console.log(`Antes que pudesse entrar na base, ${nome} se deparou com os guardas do caos!`);
-console.log(`E então...usou da sua visão laser verde para derrotar cada um deles.`);
-console.log(`Com todos os guardas mortos, ${nome} seguiu seu caminho entrando nas profundidades da base...`);
-console.log(`Quando ${nome} finalmente chega no templo do guardião, ela o avista, e então..começa uma GRANDE batalha super estrelante entre eles!⚔️☄️🔥⚡!!!!!`);
+// ATO III - Confronto com o Guardião Artemin
+console.log("⚔️ ATO III: O Confronto Estelar");
 console.log("");
 
-let poderInimigo = 100;
+let poderInimigo = 40;
 
-if (vidaAtual <= 140) {
-    console.log(`🔋 Com pouca energia vital, ${nome} ativa o núcleo estelar de emergência!`);
-    console.log(`🔥 Um ataque de luz concentrada explode a partir de sua Pulseira Solar! `);
+console.log("O Guardião Artemin. senhor dos Portais Celestiais, desce em meio a um vótice de luz e gravidade invertida.");
+console.log("Sua presença ameaça romper as fronteiras dimensionais entre as galáxias.");
+
+if (vidaAtual <= 30) {
+    console.log("🔴 Estelar está ferida, mas, com coragem, lança uma última investida poderosa!");
     poderInimigo -= (forca * 2);
-} else if (manaAtual >= 80 && classe === "Heroí´na Cósmica") {
-    console.log(`⚡ ${nome} canaliza energia solar pura em sua Lâmina de Solarium!`);
-    console.log(`🌞 Uma rajada de plasma corta o inimigo com fúria estelar!`);
-    poderInimigo -= (forca + 20);
-    manaAtual -= 80;
-} else if (agilidade >= 150) {
-    console.log(`🌪️ Utilizando sua velocidade luminosa, ${nome} defere um ataque rápido e preciso!`);
-   poderInimigo -= forca; 
+} else if (manaAtual >= 30 && classePersonagem === "Heroína Cósmica") {
+  console.log("🌟 Usando a onda Supernova, Estelar canaliza o poder das estrelas, derrubando Artemin e todo o seu poder!");
+  poderInimigo -= (forca + 25);
+  manaAtual -= 30;
+} else if (agilidade >= 25) {
+    console.log("⚡ Com agilidade suprema, ela executa um ataque certeiro nos pontos vulneráveis do inimigo!");
+    poderInimigo -= forca;
 } else {
-    console.log(`🛡️ ${nome} assume uma postura defensiva, absorvendo a energia fdo ambiente...`);
+    console.log("🪄 Estelar opta por uma defesa firme, preparando um contra-ataque calculado.");
     poderInimigo -= (forca / 2);
-    vidaAtual += 10;
+    vidaAtual += 15; //pequena recuperação estratégica
 }
-console.log(`🐉 Poder restante do inimigo:` + poderInimigo);
+
+console.log("👹 Poder restante do Guardião Artemin:" + poderInimigo);
+console.log("");
+
+// EPÍLOGO - As Constelações Mudam
+console.log("🌌EPÍLOGO: Mudanças na Galáxia");
+console.log("");
+
+if (poderInimigo <=0) {
+    console.log("🏆VITÓRIA ÉPICA!!!" + nomePersonagem + " cresce entre as estrelas.");
+    experiencia += 100;
+    combatesVencidos++;
+    console.log("✨ Experiência: " + experiencia);
+    console.log("🪐 Combates Vencidos: " + combatesVencidos);
+    console.log("Estelar sente que esse é apenas o começo do novo ciclo estelar...");
+} else {
+    console.log("⚠️ A vitória escapou por pouco. Artemin e seus guardas  do caos recuam, e Estelar sobrevive para lutar outro dia.");
+    console.log("Os Portais Celestiais seguem em risco, mas a esperança ainda brilha");
+}
+
+console.log("");
+console.log("🚀FIM DO NÍVEL 2 - O próximo capítulo será escrito entre cometas e constelações!");
